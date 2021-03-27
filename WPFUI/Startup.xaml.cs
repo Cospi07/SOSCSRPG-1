@@ -39,9 +39,7 @@ namespace WPFUI
                     SaveGameService.LoadLastSaveOrCreateNew(openFileDialog.FileName);
                 
                 MainWindow mainWindow = 
-                    new MainWindow(gameSession.CurrentPlayer,
-                                   gameSession.CurrentLocation.XCoordinate,
-                                   gameSession.CurrentLocation.YCoordinate);
+                    new MainWindow(gameSession);
                 
                 mainWindow.Show();
                 Close();
